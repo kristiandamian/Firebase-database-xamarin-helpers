@@ -21,17 +21,21 @@ namespace Firebase.DB.Helpers
 			var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
 			foreach (var pi in properties)
 			{
-				var selfValue = type.GetProperty(pi.Name).GetValue(modelo, null);
-
-				keys.Add(NSObject.FromObject(pi.Name));
-
-				if (selfValue != null)
+				object[] esOpcional = pi.GetCustomAttributes(typeof(OptionalAttribute), true);
+				if (esOpcional.Length <= 0)//NO es opcional
 				{
-					values.Add(NSObject.FromObject(selfValue));
-				}
-				else
-				{
-					values.Add(NSObject.FromObject(null));
+					var selfValue = type.GetProperty(pi.Name).GetValue(modelo, null);
+
+					keys.Add(NSObject.FromObject(pi.Name));
+
+					if (selfValue != null)
+					{
+						values.Add(NSObject.FromObject(selfValue));
+					}
+					else
+					{
+						values.Add(NSObject.FromObject(null));
+					}
 				}
 			}
 
@@ -54,8 +58,11 @@ namespace Firebase.DB.Helpers
 
 					propertyInfo.SetValue(tha_model, convertedValue);
 				}
-				catch (Exception)
+				catch (Exception ex)
 				{
+					Console.WriteLine("*****************************************************************");
+                    Console.WriteLine(ex.Message);
+					Console.WriteLine("*****************************************************************");
 					propertyInfo.SetValue(tha_model, null);
 				}
 			}

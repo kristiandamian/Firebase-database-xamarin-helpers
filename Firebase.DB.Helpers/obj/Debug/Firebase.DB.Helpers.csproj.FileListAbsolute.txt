@@ -7,3 +7,12 @@
 /Users/kristiandamian/Projects/upme/upme/Firebase.DB.Helpers/obj/Debug/Firebase.DB.Helpers.csprojResolveAssemblyReference.cache
 /Users/kristiandamian/Projects/upme/upme/Firebase.DB.Helpers/bin/Debug/Firebase.DB.Helpers.Models.dll
 /Users/kristiandamian/Projects/upme/upme/Firebase.DB.Helpers/bin/Debug/Firebase.DB.Helpers.Models.pdb
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/bin/Debug/Firebase.DB.Helpers.dll
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/bin/Debug/Firebase.DB.Helpers.pdb
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/bin/Debug/Firebase.DB.Helpers.Models.dll
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/bin/Debug/Firebase.DB.Helpers.Models.pdb
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/obj/Debug/optimized/
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/obj/Debug/Firebase.DB.Helpers.csprojResolveAssemblyReference.cache
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/obj/Debug/Firebase.DB.Helpers.csproj.CoreCompileInputs.cache
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/obj/Debug/Firebase.DB.Helpers.dll
+/Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers/obj/Debug/Firebase.DB.Helpers.pdb
