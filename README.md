@@ -15,10 +15,10 @@ Then it's posible convert the object to NSDictionary with the extension method
    ```cs
    using Firebase.DB.Helpers;
 
-   var mock = mensaje.ToNSDictionary();
+   var foo = mensaje.ToNSDictionary();
    ```
 
-Also when the firebase Dictionary is obtained, it can be translated back to the orgin object
+Also when the firebase Dictionary is obtained, it can be translated back to the original object
    ```cs
    var bar = mock.ToFirebaseBaseModel<models.Mensaje>();
    ```
