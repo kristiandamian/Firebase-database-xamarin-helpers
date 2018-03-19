@@ -8,3 +8,8 @@
 /Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers.Models/obj/Debug/Firebase.DB.Helpers.Models.csproj.CoreCompileInputs.cache
 /Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers.Models/obj/Debug/Firebase.DB.Helpers.Models.dll
 /Users/kristiandamian/Projects/Firebase Database Helpers/Firebase.DB.Helpers.Models/obj/Debug/Firebase.DB.Helpers.Models.pdb
+/Users/kristiandamian/Projects/Firebase-database-xamarin-helpers/Firebase.DB.Helpers.Models/bin/Debug/Firebase.DB.Helpers.Models.dll
+/Users/kristiandamian/Projects/Firebase-database-xamarin-helpers/Firebase.DB.Helpers.Models/bin/Debug/Firebase.DB.Helpers.Models.pdb
+/Users/kristiandamian/Projects/Firebase-database-xamarin-helpers/Firebase.DB.Helpers.Models/obj/Debug/Firebase.DB.Helpers.Models.csproj.CoreCompileInputs.cache
+/Users/kristiandamian/Projects/Firebase-database-xamarin-helpers/Firebase.DB.Helpers.Models/obj/Debug/Firebase.DB.Helpers.Models.dll
+/Users/kristiandamian/Projects/Firebase-database-xamarin-helpers/Firebase.DB.Helpers.Models/obj/Debug/Firebase.DB.Helpers.Models.pdb

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Firebase.DB.Helpers.Models;
@@ -22,15 +22,19 @@ namespace Firebase.DB.Helpers
 			foreach (var pi in properties)
 			{
 				object[] esOpcional = pi.GetCustomAttributes(typeof(OptionalAttribute), true);
+
 				if (esOpcional.Length <= 0)//NO es opcional
 				{
 					var selfValue = type.GetProperty(pi.Name).GetValue(modelo, null);
-
-					keys.Add(NSObject.FromObject(pi.Name));
+                   
+				    keys.Add(NSObject.FromObject(pi.Name));
 
 					if (selfValue != null)
 					{
-						values.Add(NSObject.FromObject(selfValue));
+                        if(selfValue is DateTime)
+                            values.Add(NSObject.FromObject(((DateTime)selfValue).Ticks));
+                        else    
+						    values.Add(NSObject.FromObject(selfValue));
 					}
 					else
 					{
@@ -50,12 +54,23 @@ namespace Firebase.DB.Helpers
 			foreach (var pi in properties)
 			{
 				PropertyInfo propertyInfo = type.GetProperty(pi.Name);
-				var value = data.ValueForKey((NSString)pi.Name);
+                object[] esID = pi.GetCustomAttributes(typeof(IdAttribute), true);
+                NSObject value;
+                if (esID.Length > 0 && esID[0] is IdAttribute) // es el ID
+                    value = data.ValueForKey((NSString)"key");
+                else
+                    value = data.ValueForKey((NSString)pi.Name);
 				//
 				try
 				{
-					var convertedValue = Convert.ChangeType(value.ToObject(propertyInfo.PropertyType), propertyInfo.PropertyType);
-
+                    object convertedValue;
+                    if (propertyInfo.PropertyType != typeof(System.DateTime))
+                        convertedValue = Convert.ChangeType(value.ToObject(propertyInfo.PropertyType), propertyInfo.PropertyType);
+                    else
+                    {
+                        long ticks = (long)Convert.ChangeType(value.ToObject(typeof(long)), typeof(long));
+                        convertedValue = new DateTime(ticks);
+                    }
 					propertyInfo.SetValue(tha_model, convertedValue);
 				}
 				catch (Exception ex)

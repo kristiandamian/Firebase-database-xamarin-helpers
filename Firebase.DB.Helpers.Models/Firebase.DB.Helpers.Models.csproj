@@ -30,7 +30,11 @@
   <ItemGroup>
     <Compile Include="FirebaseBaseObjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="OptionalAttribute.cs" />
+    <Compile Include="Atributos\IdAttribute.cs" />
+    <Compile Include="Atributos\OptionalAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Atributos\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
