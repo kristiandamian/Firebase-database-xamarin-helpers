@@ -32,3 +32,5 @@ If any property don't need to be part of the Firebase schema, but you wanna use 
     //-----------------------------------------
 	public bool Leido { get; set; }        // this one will appear in the NSDictionary
    ```
+   
+   In the case of the datetime values the ticks are saved in the firebase backend and when is retrived is converted to DateTime againg
